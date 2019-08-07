@@ -6,6 +6,31 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: #222;
+  box-sizing: border-box;
+}
+
+.fade-wait-leave {
+  opacity: 1;
+}
+
+.fade-wait-leave.fade-wait-leave-active {
+  opacity: 0;
+  transition: opacity 400ms ease-in;
+}
+
+.fade-wait-enter {
+  opacity: 0;
+}
+
+.fade-wait-enter.fade-wait-enter-active {
+  opacity: 1;
+  /* Delay the enter animation until the leave completes */
+  transition: opacity 400ms ease-in 6000ms;
+}
+
+.fade-wait-height {
+  transition: height 6000ms ease-in-out;
 }
 
 code {
